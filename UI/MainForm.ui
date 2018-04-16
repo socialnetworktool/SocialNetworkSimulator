@@ -1,0 +1,1781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1866</width>
+    <height>902</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>NetworkSimulator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBoxNetworkAnalysis">
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Network Analysis</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QGroupBox" name="groupBoxNetworkCharactor">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>30</y>
+         <width>240</width>
+         <height>261</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Network Characteristics</string>
+       </property>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>180</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>180</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonNetworkcharacteristic">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>220</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Run</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidgetNetworkCharacteristics">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>221</width>
+          <height>192</height>
+         </rect>
+        </property>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Character</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Value</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string># Nodes</string>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string># Edges</string>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="2" column="0">
+         <property name="text">
+          <string>Modularity</string>
+         </property>
+        </item>
+        <item row="2" column="1">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+        <item row="3" column="0">
+         <property name="text">
+          <string>Diameter</string>
+         </property>
+        </item>
+        <item row="3" column="1">
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>5</x>
+         <y>300</y>
+         <width>240</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Nodes Characteristics</string>
+       </property>
+       <widget class="QPushButton" name="pushButtonDegreeCentrality">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>30</y>
+          <width>141</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Degree Centrality</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonBetweennessCentrality">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>60</y>
+          <width>141</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Betweenness Centrality</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonClosenessCentrality">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>90</y>
+          <width>141</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Closeness Centrality</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonEigenvCentrality">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>120</y>
+          <width>141</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Eigenvector Centrality</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxNetworkGenerator">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Network Generator</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <widget class="QComboBox" name="comboBoxNetworkType">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>30</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Network Type:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelConfigureParameters">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>191</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Please Configure Parameter (s)</string>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="tableWidgetParameter">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>231</width>
+         <height>291</height>
+        </rect>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">Parameter</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Value</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QPushButton" name="pushButtonGenerateNetwork">
+       <property name="geometry">
+        <rect>
+         <x>121</x>
+         <y>532</y>
+         <width>115</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Generate Network</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBoxEdge">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>533</y>
+         <width>88</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Show Edge</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonRestNetwork">
+       <property name="geometry">
+        <rect>
+         <x>121</x>
+         <y>570</y>
+         <width>115</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reset Network</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxBaseMap">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>390</y>
+         <width>231</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Base Map</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QLineEdit" name="lineEditPathName">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>52</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSelectBaseMap">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>51</y>
+          <width>61</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxBaseMapLayers">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>82</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonViewBaseMap">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>80</y>
+          <width>61</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>View</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelSelectBaseMap">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Please Select Base Map File</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxFindParameters">
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Find Parameters</string>
+      </property>
+      <widget class="QTextEdit" name="textEditSeedNodes">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>221</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>88</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Early adopters:</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="horizontalSliderPleader">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>109</x>
+         <y>250</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>250</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>p-op-leader</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>300</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>p-adoption</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_pleader_value">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>270</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0.000</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="horizontalSliderPNormal">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>109</x>
+         <y>300</y>
+         <width>121</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_padopter_value">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>320</y>
+         <width>111</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>0.000</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonFindParameters">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>360</y>
+         <width>121</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find Parameters</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>410</y>
+         <width>231</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Error Counter Map</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>6</x>
+          <y>90</y>
+          <width>61</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Map Title：</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>6</x>
+          <y>30</y>
+          <width>91</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Parameter file：</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditParameterFile">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>52</y>
+          <width>133</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonOpenParameter">
+        <property name="geometry">
+         <rect>
+          <x>146</x>
+          <y>51</y>
+          <width>75</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Open</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditMapTitle">
+        <property name="geometry">
+         <rect>
+          <x>7</x>
+          <y>112</y>
+          <width>133</width>
+          <height>23</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonDrawCounterMap">
+        <property name="geometry">
+         <rect>
+          <x>146</x>
+          <y>111</y>
+          <width>75</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>View</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxSimulator">
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Information Diffusion</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QGroupBox" name="groupBoxLTModel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>350</y>
+         <width>231</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Linear Threshold Model</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QLabel" name="labelThreshold">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Threshold:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditThreshold">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>40</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Please input a number between 0 and 1.</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="maxLength">
+         <number>32767</number>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxSeedNodes">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>231</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Seed Nodes</string>
+       </property>
+       <widget class="QComboBox" name="comboBoxAlgorithmsforSeedNode">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>60</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelNumberofSeeds">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>61</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Number:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelSelectSeedsAlgorithm">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>60</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Algorithm :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditNumberofSeedNodes">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>30</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Please input an integer.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonGenerateSeedNodes">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>100</y>
+          <width>141</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Seed Nodes</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxICModel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>430</y>
+         <width>231</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Independent Cascade Model</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QLabel" name="labelOpinionNodePogagate">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>221</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Popagate Probability(Opinion Node )</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditOpinionNodePopagate">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>50</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Please input a number between 0 and 1.</string>
+        </property>
+        <property name="text">
+         <string>0.3</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelNormalNodePopagate">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Popagate Probability(Normal Node)</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEditNormalNodePopagate">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>100</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Please input a number between 0 and 1.</string>
+        </property>
+        <property name="text">
+         <string>0.2</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButtonDiffusion">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>570</y>
+         <width>141</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Information Difussion</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxOpinionLeaders">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>231</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Opinion Leaders</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QRadioButton" name="radioButtonWholeNetwork">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>121</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Whole Network</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButtonEachCommunity">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>131</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Each Community</string>
+        </property>
+       </widget>
+       <widget class="QSplitter" name="splitter">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>220</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Proportion：</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditPropotion"/>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>%</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButtonGenerateOpinionLeaders">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>120</y>
+          <width>161</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Generate Opinion Leaders</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxComplexNetwork">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="title">
+       <string>Complex Network Generator</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QTableWidget" name="tableWidgetComplexLinks">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>550</y>
+         <width>235</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="cornerButtonEnabled">
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string>NetID[S]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>#Node[S]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Rule[S]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>NetID[D]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>#Node[D]</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Rule[D]</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLineEdit" name="lineEditNetworkCount">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>62</y>
+         <width>133</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonOKforNetworkCount">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>61</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>OK</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="labelNetworkCount">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>191</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>The number of simple networks:</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxEverySimpleNetwork">
+       <property name="geometry">
+        <rect>
+         <x>2</x>
+         <y>220</y>
+         <width>241</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Single Network Setting</string>
+       </property>
+       <widget class="QComboBox" name="comboBoxNetworkID">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>30</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelNetworkID">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>71</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>NetworkID:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelNetworkTypeSingle">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>60</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>NetworkType:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxNetworkTypeforComplex">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>60</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidgetParameterComplexParameters">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>90</y>
+          <width>231</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <column>
+         <property name="text">
+          <string notr="true">Parameter</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Value</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="pushButtonOverview">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>240</y>
+          <width>171</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Overview of all parameters</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSaveComplexNetworkParams">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>210</y>
+          <width>171</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Save the above parameters</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="labelNetworkCount_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>491</y>
+         <width>107</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Connect networks:</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonExpandShrink">
+       <property name="geometry">
+        <rect>
+         <x>124</x>
+         <y>490</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Expand Table</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBoxBaseMapComplex">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>231</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Base Map</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <widget class="QLineEdit" name="lineEditPathNameComplex">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>52</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSelectBaseMapComplex">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>51</y>
+          <width>61</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Select</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBoxBaseMapLayersComplex">
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>82</y>
+          <width>151</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonViewBaseMapComplex">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>80</y>
+          <width>61</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>View</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="labelSelectBaseMapComplex">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>181</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Please Select Base Map File</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButtonRemoveConnect">
+       <property name="geometry">
+        <rect>
+         <x>124</x>
+         <y>520</y>
+         <width>111</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>RemoveConnect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonAddConnect">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>520</y>
+         <width>101</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>AddConnect</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonGenerateComplexNetwork">
+       <property name="geometry">
+        <rect>
+         <x>64</x>
+         <y>650</y>
+         <width>181</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Generate Complex Network</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxCommunity">
+      <property name="maximumSize">
+       <size>
+        <width>250</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Community</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QTableWidget" name="tableWidgetCommunity">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>231</width>
+         <height>192</height>
+        </rect>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAsNeeded</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <column>
+        <property name="text">
+         <string># Nodes</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Color</string>
+        </property>
+        <property name="textAlignment">
+         <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Community</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxPreview">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Preview</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QWidget" name="FrameCanvas" native="true">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="margin">
+           <number>2</number>
+          </property>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1866</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuNetwork">
+    <property name="title">
+     <string>Network</string>
+    </property>
+    <addaction name="actionGenerate_Simulated_Network"/>
+    <addaction name="actionGenerate_Complex_Network"/>
+    <addaction name="actionSave_Network"/>
+    <addaction name="actionLoad_Network"/>
+   </widget>
+   <widget class="QMenu" name="menuAnalysis">
+    <property name="title">
+     <string>Analysis</string>
+    </property>
+    <addaction name="actionNetwork_Analysis"/>
+   </widget>
+   <widget class="QMenu" name="menuSimulator">
+    <property name="title">
+     <string>Simulator</string>
+    </property>
+    <addaction name="actionUser_Level"/>
+    <addaction name="actionCity_Level"/>
+   </widget>
+   <widget class="QMenu" name="menuCommunity">
+    <property name="title">
+     <string>Community</string>
+    </property>
+    <addaction name="actionCNM"/>
+   </widget>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="actionExtract_Diffusion_Network"/>
+    <addaction name="actionExtract_Mentioned_Network"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuNetwork"/>
+   <addaction name="menuAnalysis"/>
+   <addaction name="menuCommunity"/>
+   <addaction name="menuSimulator"/>
+   <addaction name="menuData"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionFindParameters">
+   <property name="text">
+    <string>FindParameters</string>
+   </property>
+  </action>
+  <action name="actionDemonstrate_Temporal_Spatial_Process">
+   <property name="text">
+    <string>Demonstrate Temporal-Spatial Process</string>
+   </property>
+  </action>
+  <action name="actionGeoDataFromTweets">
+   <property name="text">
+    <string>GeoDataFromTweets</string>
+   </property>
+  </action>
+  <action name="actionSocialNetworkFromTweets">
+   <property name="text">
+    <string>Extract Diffusion Network</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Simulated_Network">
+   <property name="text">
+    <string>Generate Single Simulated Network</string>
+   </property>
+  </action>
+  <action name="actionNetwork_Analysis">
+   <property name="text">
+    <string>Network Analysis</string>
+   </property>
+  </action>
+  <action name="actionWindowNetwork_Analysis">
+   <property name="text">
+    <string>Network Analysis</string>
+   </property>
+  </action>
+  <action name="actionWindowNetwork_Generator">
+   <property name="text">
+    <string>Network Generator</string>
+   </property>
+  </action>
+  <action name="actionWindowSimulating_Information_Diffusion">
+   <property name="text">
+    <string>Simulating Information Diffusion</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionDocument">
+   <property name="text">
+    <string>Document</string>
+   </property>
+  </action>
+  <action name="actionGenerate_Complex_Network">
+   <property name="text">
+    <string>Generate Complex Simulated Network</string>
+   </property>
+  </action>
+  <action name="actionCNM">
+   <property name="text">
+    <string>CNM</string>
+   </property>
+  </action>
+  <action name="actionGirvanNewman">
+   <property name="text">
+    <string>GirvanNewman</string>
+   </property>
+  </action>
+  <action name="actionOSLOM">
+   <property name="text">
+    <string>OSLOM</string>
+   </property>
+  </action>
+  <action name="actionCollect_tweets_by_Account">
+   <property name="text">
+    <string>Collect tweets by Account</string>
+   </property>
+  </action>
+  <action name="actionExtract_Social_Network">
+   <property name="text">
+    <string>Extract Social Network</string>
+   </property>
+  </action>
+  <action name="actionMerge_Network">
+   <property name="text">
+    <string>Merge Network</string>
+   </property>
+  </action>
+  <action name="actionPredict_Diffusion">
+   <property name="text">
+    <string>Predict Diffusion</string>
+   </property>
+  </action>
+  <action name="actionLoad_Network">
+   <property name="text">
+    <string>Load Network</string>
+   </property>
+  </action>
+  <action name="actionInformation_Diffusion_City">
+   <property name="text">
+    <string>Information Diffusion [City]</string>
+   </property>
+  </action>
+  <action name="actionUser">
+   <property name="text">
+    <string>User</string>
+   </property>
+  </action>
+  <action name="actionCity">
+   <property name="text">
+    <string>City</string>
+   </property>
+  </action>
+  <action name="menuInformation_Diffusion_City">
+   <property name="text">
+    <string>[City]Information Diffusion</string>
+   </property>
+  </action>
+  <action name="actionExtract_Diffusion_Network">
+   <property name="text">
+    <string>Extract Diffusion Network</string>
+   </property>
+  </action>
+  <action name="actionExtract_Mentioned_Network">
+   <property name="text">
+    <string>Extract Mentioned Network</string>
+   </property>
+  </action>
+  <action name="actionCompute_Weight_Matrix">
+   <property name="text">
+    <string>Compute Weight Matrix</string>
+   </property>
+  </action>
+  <action name="actionSave_Network">
+   <property name="text">
+    <string>Save Network</string>
+   </property>
+  </action>
+  <action name="menuInformation_Diffusion_User_2">
+   <property name="text">
+    <string>[User]Information Diffusion</string>
+   </property>
+  </action>
+  <action name="actionUser_Level">
+   <property name="text">
+    <string>User Level</string>
+   </property>
+  </action>
+  <action name="actionCity_Level">
+   <property name="text">
+    <string>City Level</string>
+   </property>
+  </action>
+  <action name="actionUser_Manual">
+   <property name="text">
+    <string>User Manual</string>
+   </property>
+  </action>
+  <action name="actionAbout_2">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>450</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
