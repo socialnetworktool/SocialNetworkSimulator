@@ -53,3 +53,14 @@ After starting the software tool, you can see there is a menu bar on the top of 
 | **Simulator**->User Level |Simulate information diffusion on the user level |
 | **Simulator**->City Level |Simulate information diffusion on the city level |
 | **Data** |Provide some functions to prepare the data used in the software|
+
+## Example
+
+Let's generate a single simulated network use this software.
+After starting the software, the default window is for generating a single simulated network. If you are not on the interface, please choose Network->Generate Single Simulated Network to switch to the following window:
+![ Generate a Single Simulated Network](/images/example1.jpg)
+To generate a single network, please follow these steps:
+ 1. Select a network model from the pull-down list.
+ 2. After selecting a network model, the responding parameters will load automatically. Different network model has different set of parameters. Please configure all the parameters as the picture shows below:
+ ![ Configure parameters for the network](/images/example2.jpg)
+ 3. Check **Base Map** to generate a network with a underlying base map (.shp file), or leave it unchecked to get a network without any base map. Check **Show Edge** or not to control if the network shows edges among nodes.
