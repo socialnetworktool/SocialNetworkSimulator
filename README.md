@@ -4,7 +4,7 @@ A software that enable spatio-temporal social network analysis and simulation.
 Currently, social media has been playing an important role in the process of information diffusion. Exploring the pattern of message propagation on social network help us better prepare for natural disasters or human crises. So, we developed models, algorithms, and tools to generate simulated networks, analyze simulated networks, and simulate information diffusion on social network over time.
 
 
-## GETTING STARTED
+## Installation
 In **software_and_packages** folder: 
 1) Python 2.7 64 version is required
 
@@ -35,7 +35,7 @@ In **software_and_packages** folder:
 	          Pip install snap-4.0.0-4.0-Win-x64-py2.7.zip
           ```
 5) To start this software, please use the command for command prompt, for example:    			```Python C:\SocialNetworkSimulator\ SocialNetworkSimulator.py```
-## Menu
+## Getting Started
 
 After starting the software tool, you can see there is a menu bar on the top of the main window. Below is the summary of the functions in the menu:
 
