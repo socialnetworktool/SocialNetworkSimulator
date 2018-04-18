@@ -42,14 +42,14 @@ After starting the software tool, you can see there is a menu bar on the top of 
 
 | Menu | Description |
 |---|---|
-| **File**-Exit|Exit the software|
-| **Network**-Generate Single Simulated network | Generate a simulated network based on a single model.|
-| **Network**-Generate Complex Simulated network | Generate a complex network based on one or more network model. The complex network is constructed by adding edges among several smaller networks|
-| **Network**-Save Network | Save the current network as a txt file|
-| **Network**-Load Network | Load a network from a txt file|
-| **Analysis**-Network Analysis | Perform network analysis|
-| **Community**-CNM | Conduct community detection with CNM algorithm|
-| **Community**-GirvanNewman |Conduct community detection with GirvanNewman algorithm  |
-| **Simulator**-User Level |Simulate information diffusion on the user level |
-| **Simulator**-City Level |Simulate information diffusion on the city level |
+| **File**->Exit|Exit the software|
+| **Network**->Generate Single Simulated network | Generate a simulated network based on a single model.|
+| **Network**->Generate Complex Simulated network | Generate a complex network based on one or more network model. The complex network is constructed by adding edges among several smaller networks|
+| **Network**->Save Network | Save the current network as a txt file|
+| **Network**->Load Network | Load a network from a txt file|
+| **Analysis**->Network Analysis | Perform network analysis|
+| **Community**->CNM | Conduct community detection with CNM algorithm|
+| **Community**->GirvanNewman |Conduct community detection with GirvanNewman algorithm  |
+| **Simulator**->User Level |Simulate information diffusion on the user level |
+| **Simulator**->City Level |Simulate information diffusion on the city level |
 | **Data** |Provide some functions to prepare the data used in the software|
