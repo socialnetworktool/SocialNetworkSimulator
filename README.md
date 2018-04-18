@@ -64,3 +64,5 @@ To generate a single network, please follow these steps:
  2. After selecting a network model, the responding parameters will load automatically. Different network model has different set of parameters. Please configure all the parameters as the picture shows below:
  ![ Configure parameters for the network](/images/example2.jpg)
  3. Check **Base Map** to generate a network with a underlying base map (.shp file), or leave it unchecked to get a network without any base map. Check **Show Edge** or not to control if the network shows edges among nodes.
+ You may get the similar network like below:
+ ![ Interface after a network is generated](/images/example3.jpg)
