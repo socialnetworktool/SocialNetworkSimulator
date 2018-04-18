@@ -22,9 +22,9 @@ Currently, social media has been playing an important role in the process of inf
 3) Double click vcredist_x64.exe to install it.
 4) Install module numpy, matplotlib, Snap, and xlrd.
      - a. Open command prompt and change path to the location where packages are. Here you are supposed to extract the tool file to C:\SocialNetworkSimulator. Use the command:
-     ```
-		     cd C:\SocialNetworkSimulator\softwares_and_packages
-     ``` 
+	     ```	
+	    cd C:\SocialNetworkSimulator\softwares_and_packages
+	    ```
      to change the path.
      - b. Execute the following commands using command prompt.
           ```
