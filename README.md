@@ -21,7 +21,7 @@ In **software_and_packages** folder:
      
 2) Double click *PyQt4-4.11.4-gpl-Py2.7-Qt4.8.7-x64.exe* to install PyQt package.
 3) Double click *vcredist_x64.exe* to install it.
-4) Install module numpy, matplotlib, Snap, and xlrd.
+4) Install module *numpy*, *matplotlib*, *Snap*, and *xlrd*.
      - a. Open command prompt and change path to the location where packages are. Here you are supposed to extract the tool file to C:\SocialNetworkSimulator. Use the command:
 	     ```	
 	    cd C:\SocialNetworkSimulator\softwares_and_packages
