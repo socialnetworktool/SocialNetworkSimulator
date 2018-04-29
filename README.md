@@ -15,6 +15,9 @@ Wang, Z. & Ye, X*. (2017) Social Media Analytics for Natural Disaster Management
 
 Lee, J., & Ye, X*. (2018). An Open Source Spatiotemporal Model for Simulating Obesity Prevalence. In GeoComputational Analysis and Modeling of Regional Systems (pp. 395-410). Springer, Cham.
 
+Wang, Z., Ye, X, Lee. J., Chang, X., Liu, H., & Li, Q. (2018) A Spatial Econometric Modeling of Online Social Interactions Using Microblogs. Computers, Environment and Urban Systems. doi: 10.1016/j.compenvurbsys.2018.02.001
+
+
 ## Installation
 In **software_and_packages** folder: 
 1) Python 2.7 64 version is required
