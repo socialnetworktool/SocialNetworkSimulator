@@ -4,10 +4,15 @@ A software that enable spatio-temporal social network analysis and simulation.
 Currently, social media has been playing an important role in the process of information diffusion. Exploring the pattern of message propagation on social network help us better prepare for natural disasters or human crises. So, we developed models, algorithms, and tools to generate simulated networks, analyze simulated networks, and simulate information diffusion on social network over time.
 
 Please cite the following relevant papers:
+
 Ye, X., Dang, L., Lee, J., Tsou, M. H., & Chen, Z. (2018). Open source social network simulator focusing on spatial meme diffusion. In Human Dynamics Research in Smart and Connected Communities (pp. 203-222). Springer, Cham.
+
 Ye, X. & Liu, X. (2018) Integrating social network and spatial analyses of the built environment, Environment and Planning B. doi: 10.1177/2399808318772381
+
 Ye, X., Sharag-Eldin, A., Spitzberg, B., & Wu, L. (2018) Analyzing Public Opinions on Death Penalty Abolishment. Chinese Sociological Dialogue. doi: 10.1177/2397200918761665
+
 Wang, Z. & Ye, X*. (2017) Social Media Analytics for Natural Disaster Management. International Journal of Geographical Information Science doi: 10.1080/13658816.2017.1367003
+
 Lee, J., & Ye, X*. (2018). An Open Source Spatiotemporal Model for Simulating Obesity Prevalence. In GeoComputational Analysis and Modeling of Regional Systems (pp. 395-410). Springer, Cham.
 
 ## Installation
