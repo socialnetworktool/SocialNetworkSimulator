@@ -1,6 +1,7 @@
 
-# SocialNetworkSimulator
-A software that enable spatio-temporal social network analysis and simulation.
+# Social Network Simulator
+SocialNetworkSimulator, A software that enable spatio-temporal social network analysis and simulation, is co-direcetd by Xinyue Ye and Jay Lee and developed by Computational Social Science Lab at Kent State University.
+
 Currently, social media has been playing an important role in the process of information diffusion. Exploring the pattern of message propagation on social network help us better prepare for natural disasters or human crises. So, we developed models, algorithms, and tools to generate simulated networks, analyze simulated networks, and simulate information diffusion on social network over time.
 
 Please cite the following relevant papers:
