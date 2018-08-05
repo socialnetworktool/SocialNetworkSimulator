@@ -23,9 +23,15 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QGroupBox" name="groupBoxNetworkAnalysis">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
-        <width>250</width>
+        <width>300</width>
         <height>16777215</height>
        </size>
       </property>
@@ -46,7 +52,7 @@
         <rect>
          <x>5</x>
          <y>30</y>
-         <width>240</width>
+         <width>281</width>
          <height>261</height>
         </rect>
        </property>
@@ -82,8 +88,8 @@
        <widget class="QPushButton" name="pushButtonNetworkcharacteristic">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>220</y>
+          <x>190</x>
+          <y>230</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -96,8 +102,8 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>20</y>
-          <width>221</width>
+          <y>27</y>
+          <width>251</width>
           <height>192</height>
          </rect>
         </property>
@@ -181,7 +187,7 @@
         <rect>
          <x>5</x>
          <y>300</y>
-         <width>240</width>
+         <width>281</width>
          <height>161</height>
         </rect>
        </property>
@@ -191,11 +197,16 @@
        <widget class="QPushButton" name="pushButtonDegreeCentrality">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>40</x>
           <y>30</y>
-          <width>141</width>
-          <height>23</height>
+          <width>210</width>
+          <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Degree Centrality</string>
@@ -204,11 +215,16 @@
        <widget class="QPushButton" name="pushButtonBetweennessCentrality">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>40</x>
           <y>60</y>
-          <width>141</width>
-          <height>23</height>
+          <width>210</width>
+          <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Betweenness Centrality</string>
@@ -217,11 +233,16 @@
        <widget class="QPushButton" name="pushButtonClosenessCentrality">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>40</x>
           <y>90</y>
-          <width>141</width>
-          <height>23</height>
+          <width>210</width>
+          <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Closeness Centrality</string>
@@ -230,11 +251,16 @@
        <widget class="QPushButton" name="pushButtonEigenvCentrality">
         <property name="geometry">
          <rect>
-          <x>50</x>
+          <x>40</x>
           <y>120</y>
-          <width>141</width>
-          <height>23</height>
+          <width>210</width>
+          <height>25</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Eigenvector Centrality</string>
@@ -251,9 +277,15 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
-        <width>250</width>
+        <width>300</width>
         <height>16777215</height>
        </size>
       </property>
@@ -275,9 +307,9 @@
       <widget class="QComboBox" name="comboBoxNetworkType">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>150</x>
          <y>30</y>
-         <width>141</width>
+         <width>131</width>
          <height>20</height>
         </rect>
        </property>
@@ -287,12 +319,14 @@
         <rect>
          <x>10</x>
          <y>30</y>
-         <width>91</width>
+         <width>111</width>
          <height>20</height>
         </rect>
        </property>
        <property name="font">
         <font>
+         <family>Arial</family>
+         <pointsize>8</pointsize>
          <weight>50</weight>
          <bold>false</bold>
         </font>
@@ -306,9 +340,15 @@
         <rect>
          <x>10</x>
          <y>60</y>
-         <width>191</width>
-         <height>16</height>
+         <width>230</width>
+         <height>20</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Please Configure Parameter (s)</string>
@@ -318,8 +358,8 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>80</y>
-         <width>231</width>
+         <y>85</y>
+         <width>271</width>
          <height>291</height>
         </rect>
        </property>
@@ -337,11 +377,16 @@
       <widget class="QPushButton" name="pushButtonGenerateNetwork">
        <property name="geometry">
         <rect>
-         <x>121</x>
-         <y>532</y>
-         <width>115</width>
+         <x>140</x>
+         <y>530</y>
+         <width>151</width>
          <height>23</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Generate Network</string>
@@ -351,10 +396,16 @@
        <property name="geometry">
         <rect>
          <x>21</x>
-         <y>533</y>
-         <width>88</width>
-         <height>19</height>
+         <y>527</y>
+         <width>125</width>
+         <height>20</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Show Edge</string>
@@ -366,11 +417,16 @@
       <widget class="QPushButton" name="pushButtonRestNetwork">
        <property name="geometry">
         <rect>
-         <x>121</x>
-         <y>570</y>
-         <width>115</width>
+         <x>140</x>
+         <y>560</y>
+         <width>151</width>
          <height>23</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Reset Network</string>
@@ -381,7 +437,7 @@
         <rect>
          <x>10</x>
          <y>390</y>
-         <width>231</width>
+         <width>271</width>
          <height>121</height>
         </rect>
        </property>
@@ -399,7 +455,7 @@
          <rect>
           <x>11</x>
           <y>52</y>
-          <width>151</width>
+          <width>181</width>
           <height>21</height>
          </rect>
         </property>
@@ -407,8 +463,8 @@
        <widget class="QPushButton" name="pushButtonSelectBaseMap">
         <property name="geometry">
          <rect>
-          <x>164</x>
-          <y>51</y>
+          <x>200</x>
+          <y>50</y>
           <width>61</width>
           <height>23</height>
          </rect>
@@ -422,7 +478,7 @@
          <rect>
           <x>11</x>
           <y>82</y>
-          <width>151</width>
+          <width>181</width>
           <height>21</height>
          </rect>
         </property>
@@ -430,7 +486,7 @@
        <widget class="QPushButton" name="pushButtonViewBaseMap">
         <property name="geometry">
          <rect>
-          <x>164</x>
+          <x>200</x>
           <y>80</y>
           <width>61</width>
           <height>23</height>
@@ -445,22 +501,43 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>181</width>
+          <width>211</width>
           <height>16</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Please Select Base Map File</string>
         </property>
        </widget>
       </widget>
+      <zorder>comboBoxNetworkType</zorder>
+      <zorder>label</zorder>
+      <zorder>labelConfigureParameters</zorder>
+      <zorder>tableWidgetParameter</zorder>
+      <zorder>pushButtonGenerateNetwork</zorder>
+      <zorder>checkBoxEdge</zorder>
+      <zorder>pushButtonRestNetwork</zorder>
+      <zorder>groupBoxBaseMap</zorder>
+      <zorder>groupBoxNetworkAnalysis</zorder>
      </widget>
     </item>
     <item>
      <widget class="QGroupBox" name="groupBoxFindParameters">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
-        <width>250</width>
+        <width>300</width>
         <height>16777215</height>
        </size>
       </property>
@@ -478,7 +555,7 @@
         <rect>
          <x>10</x>
          <y>50</y>
-         <width>221</width>
+         <width>281</width>
          <height>171</height>
         </rect>
        </property>
@@ -491,7 +568,7 @@
         <rect>
          <x>10</x>
          <y>20</y>
-         <width>88</width>
+         <width>141</width>
          <height>17</height>
         </rect>
        </property>
@@ -505,9 +582,9 @@
        </property>
        <property name="geometry">
         <rect>
-         <x>109</x>
+         <x>130</x>
          <y>250</y>
-         <width>121</width>
+         <width>161</width>
          <height>20</height>
         </rect>
        </property>
@@ -523,9 +600,15 @@
         <rect>
          <x>10</x>
          <y>250</y>
-         <width>71</width>
-         <height>16</height>
+         <width>101</width>
+         <height>20</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>p-op-leader</string>
@@ -536,9 +619,15 @@
         <rect>
          <x>10</x>
          <y>300</y>
-         <width>71</width>
+         <width>101</width>
          <height>16</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>9</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>p-adoption</string>
@@ -547,7 +636,7 @@
       <widget class="QLabel" name="label_pleader_value">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>130</x>
          <y>270</y>
          <width>111</width>
          <height>16</height>
@@ -563,9 +652,9 @@
        </property>
        <property name="geometry">
         <rect>
-         <x>109</x>
+         <x>130</x>
          <y>300</y>
-         <width>121</width>
+         <width>161</width>
          <height>20</height>
         </rect>
        </property>
@@ -579,7 +668,7 @@
       <widget class="QLabel" name="label_padopter_value">
        <property name="geometry">
         <rect>
-         <x>110</x>
+         <x>130</x>
          <y>320</y>
          <width>111</width>
          <height>16</height>
@@ -592,11 +681,17 @@
       <widget class="QPushButton" name="pushButtonFindParameters">
        <property name="geometry">
         <rect>
-         <x>110</x>
-         <y>360</y>
-         <width>121</width>
-         <height>23</height>
+         <x>160</x>
+         <y>350</y>
+         <width>131</width>
+         <height>25</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Find Parameters</string>
@@ -607,12 +702,12 @@
         <rect>
          <x>10</x>
          <y>410</y>
-         <width>231</width>
+         <width>281</width>
          <height>151</height>
         </rect>
        </property>
        <property name="title">
-        <string>Error Counter Map</string>
+        <string>Error Contour Map</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -622,7 +717,7 @@
          <rect>
           <x>6</x>
           <y>90</y>
-          <width>61</width>
+          <width>101</width>
           <height>16</height>
          </rect>
         </property>
@@ -648,7 +743,7 @@
          <rect>
           <x>7</x>
           <y>52</y>
-          <width>133</width>
+          <width>171</width>
           <height>23</height>
          </rect>
         </property>
@@ -656,8 +751,8 @@
        <widget class="QPushButton" name="pushButtonOpenParameter">
         <property name="geometry">
          <rect>
-          <x>146</x>
-          <y>51</y>
+          <x>200</x>
+          <y>50</y>
           <width>75</width>
           <height>25</height>
          </rect>
@@ -671,7 +766,7 @@
          <rect>
           <x>7</x>
           <y>112</y>
-          <width>133</width>
+          <width>171</width>
           <height>23</height>
          </rect>
         </property>
@@ -679,8 +774,8 @@
        <widget class="QPushButton" name="pushButtonDrawCounterMap">
         <property name="geometry">
          <rect>
-          <x>146</x>
-          <y>111</y>
+          <x>200</x>
+          <y>110</y>
           <width>75</width>
           <height>25</height>
          </rect>
@@ -690,13 +785,30 @@
         </property>
        </widget>
       </widget>
+      <zorder>textEditSeedNodes</zorder>
+      <zorder>label_2</zorder>
+      <zorder>horizontalSliderPleader</zorder>
+      <zorder>label_3</zorder>
+      <zorder>label_4</zorder>
+      <zorder>label_pleader_value</zorder>
+      <zorder>horizontalSliderPNormal</zorder>
+      <zorder>label_padopter_value</zorder>
+      <zorder>pushButtonFindParameters</zorder>
+      <zorder>groupBox_2</zorder>
+      <zorder>groupBoxNetworkGenerator</zorder>
      </widget>
     </item>
     <item>
      <widget class="QGroupBox" name="groupBoxSimulator">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
-        <width>250</width>
+        <width>300</width>
         <height>16777215</height>
        </size>
       </property>
@@ -717,9 +829,14 @@
         <rect>
          <x>10</x>
          <y>350</y>
-         <width>231</width>
+         <width>281</width>
          <height>71</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="title">
         <string>Linear Threshold Model</string>
@@ -733,9 +850,9 @@
        <widget class="QLabel" name="labelThreshold">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>20</x>
           <y>40</y>
-          <width>71</width>
+          <width>101</width>
           <height>16</height>
          </rect>
         </property>
@@ -746,7 +863,7 @@
        <widget class="QLineEdit" name="lineEditThreshold">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>130</x>
           <y>40</y>
           <width>141</width>
           <height>20</height>
@@ -771,8 +888,8 @@
         <rect>
          <x>10</x>
          <y>30</y>
-         <width>231</width>
-         <height>141</height>
+         <width>281</width>
+         <height>131</height>
         </rect>
        </property>
        <property name="title">
@@ -781,7 +898,7 @@
        <widget class="QComboBox" name="comboBoxAlgorithmsforSeedNode">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>130</x>
           <y>60</y>
           <width>141</width>
           <height>21</height>
@@ -791,11 +908,16 @@
        <widget class="QLabel" name="labelNumberofSeeds">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>30</x>
           <y>30</y>
-          <width>61</width>
+          <width>91</width>
           <height>16</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Number:</string>
@@ -804,20 +926,25 @@
        <widget class="QLabel" name="labelSelectSeedsAlgorithm">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>30</x>
           <y>60</y>
-          <width>71</width>
-          <height>16</height>
+          <width>91</width>
+          <height>21</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Algorithm :</string>
+         <string>Algorithm:</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="lineEditNumberofSeedNodes">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>130</x>
           <y>30</y>
           <width>141</width>
           <height>20</height>
@@ -830,11 +957,16 @@
        <widget class="QPushButton" name="pushButtonGenerateSeedNodes">
         <property name="geometry">
          <rect>
-          <x>80</x>
-          <y>100</y>
-          <width>141</width>
-          <height>23</height>
+          <x>100</x>
+          <y>90</y>
+          <width>181</width>
+          <height>28</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Generate Seed Nodes</string>
@@ -845,10 +977,16 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>430</y>
-         <width>231</width>
-         <height>131</height>
+         <y>433</y>
+         <width>281</width>
+         <height>171</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>8</pointsize>
+        </font>
        </property>
        <property name="title">
         <string>Independent Cascade Model</string>
@@ -857,25 +995,30 @@
         <bool>true</bool>
        </property>
        <property name="checked">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <widget class="QLabel" name="labelOpinionNodePogagate">
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>30</y>
-          <width>221</width>
-          <height>16</height>
+          <y>26</y>
+          <width>261</width>
+          <height>20</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Popagate Probability(Opinion Node )</string>
+         <string>Popagate Probability(Opinion Node)</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="lineEditOpinionNodePopagate">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>130</x>
           <y>50</y>
           <width>141</width>
           <height>20</height>
@@ -892,10 +1035,15 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>80</y>
-          <width>211</width>
-          <height>16</height>
+          <y>76</y>
+          <width>261</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Popagate Probability(Normal Node)</string>
@@ -904,7 +1052,7 @@
        <widget class="QLineEdit" name="lineEditNormalNodePopagate">
         <property name="geometry">
          <rect>
-          <x>80</x>
+          <x>130</x>
           <y>100</y>
           <width>141</width>
           <height>20</height>
@@ -917,26 +1065,31 @@
          <string>0.2</string>
         </property>
        </widget>
-      </widget>
-      <widget class="QPushButton" name="pushButtonDiffusion">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>570</y>
-         <width>141</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Information Difussion</string>
-       </property>
+       <widget class="QPushButton" name="pushButtonDiffusion">
+        <property name="geometry">
+         <rect>
+          <x>104</x>
+          <y>130</y>
+          <width>161</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Information Difussion</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QGroupBox" name="groupBoxOpinionLeaders">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>180</y>
-         <width>231</width>
+         <width>281</width>
          <height>161</height>
         </rect>
        </property>
@@ -954,9 +1107,14 @@
          <rect>
           <x>10</x>
           <y>30</y>
-          <width>121</width>
-          <height>17</height>
+          <width>157</width>
+          <height>23</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Whole Network</string>
@@ -969,10 +1127,15 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>50</y>
-          <width>131</width>
-          <height>17</height>
+          <y>55</y>
+          <width>161</width>
+          <height>20</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Each Community</string>
@@ -981,9 +1144,9 @@
        <widget class="QSplitter" name="splitter">
         <property name="geometry">
          <rect>
-          <x>10</x>
+          <x>20</x>
           <y>80</y>
-          <width>220</width>
+          <width>241</width>
           <height>23</height>
          </rect>
         </property>
@@ -991,6 +1154,11 @@
          <enum>Qt::Horizontal</enum>
         </property>
         <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Proportion：</string>
          </property>
@@ -1007,15 +1175,25 @@
          <rect>
           <x>60</x>
           <y>120</y>
-          <width>161</width>
-          <height>23</height>
+          <width>211</width>
+          <height>28</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>8</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>Generate Opinion Leaders</string>
         </property>
        </widget>
       </widget>
+      <zorder>groupBoxLTModel</zorder>
+      <zorder>groupBoxSeedNodes</zorder>
+      <zorder>groupBoxICModel</zorder>
+      <zorder>groupBoxOpinionLeaders</zorder>
+      <zorder>groupBoxNetworkGenerator</zorder>
      </widget>
     </item>
     <item>
@@ -1031,20 +1209,20 @@
       </property>
       <property name="minimumSize">
        <size>
-        <width>0</width>
+        <width>300</width>
         <height>0</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
-        <width>250</width>
+        <width>300</width>
         <height>16777215</height>
        </size>
       </property>
       <property name="font">
        <font>
         <family>Microsoft YaHei UI</family>
-        <pointsize>9</pointsize>
+        <pointsize>8</pointsize>
        </font>
       </property>
       <property name="mouseTracking">
@@ -1059,9 +1237,9 @@
       <widget class="QTableWidget" name="tableWidgetComplexLinks">
        <property name="geometry">
         <rect>
-         <x>8</x>
-         <y>550</y>
-         <width>235</width>
+         <x>10</x>
+         <y>560</y>
+         <width>281</width>
          <height>91</height>
         </rect>
        </property>
@@ -1110,7 +1288,7 @@
         <rect>
          <x>11</x>
          <y>62</y>
-         <width>133</width>
+         <width>145</width>
          <height>21</height>
         </rect>
        </property>
@@ -1118,8 +1296,8 @@
       <widget class="QPushButton" name="pushButtonOKforNetworkCount">
        <property name="geometry">
         <rect>
-         <x>150</x>
-         <y>61</y>
+         <x>170</x>
+         <y>60</y>
          <width>75</width>
          <height>23</height>
         </rect>
@@ -1132,8 +1310,8 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>40</y>
-         <width>191</width>
+         <y>30</y>
+         <width>251</width>
          <height>20</height>
         </rect>
        </property>
@@ -1145,8 +1323,8 @@
        <property name="geometry">
         <rect>
          <x>2</x>
-         <y>220</y>
-         <width>241</width>
+         <y>211</y>
+         <width>291</width>
          <height>271</height>
         </rect>
        </property>
@@ -1156,7 +1334,7 @@
        <widget class="QComboBox" name="comboBoxNetworkID">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>140</x>
           <y>30</y>
           <width>141</width>
           <height>21</height>
@@ -1166,9 +1344,9 @@
        <widget class="QLabel" name="labelNetworkID">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>8</x>
           <y>30</y>
-          <width>71</width>
+          <width>91</width>
           <height>16</height>
          </rect>
         </property>
@@ -1181,7 +1359,7 @@
          <rect>
           <x>8</x>
           <y>60</y>
-          <width>81</width>
+          <width>101</width>
           <height>20</height>
          </rect>
         </property>
@@ -1192,7 +1370,7 @@
        <widget class="QComboBox" name="comboBoxNetworkTypeforComplex">
         <property name="geometry">
          <rect>
-          <x>90</x>
+          <x>140</x>
           <y>60</y>
           <width>141</width>
           <height>21</height>
@@ -1204,7 +1382,7 @@
          <rect>
           <x>5</x>
           <y>90</y>
-          <width>231</width>
+          <width>271</width>
           <height>111</height>
          </rect>
         </property>
@@ -1225,9 +1403,9 @@
        <widget class="QPushButton" name="pushButtonOverview">
         <property name="geometry">
          <rect>
-          <x>60</x>
+          <x>15</x>
           <y>240</y>
-          <width>171</width>
+          <width>221</width>
           <height>23</height>
          </rect>
         </property>
@@ -1238,9 +1416,9 @@
        <widget class="QPushButton" name="pushButtonSaveComplexNetworkParams">
         <property name="geometry">
          <rect>
-          <x>60</x>
+          <x>15</x>
           <y>210</y>
-          <width>171</width>
+          <width>221</width>
           <height>23</height>
          </rect>
         </property>
@@ -1252,9 +1430,9 @@
       <widget class="QLabel" name="labelNetworkCount_2">
        <property name="geometry">
         <rect>
-         <x>11</x>
-         <y>491</y>
-         <width>107</width>
+         <x>20</x>
+         <y>497</y>
+         <width>151</width>
          <height>16</height>
         </rect>
        </property>
@@ -1265,8 +1443,8 @@
       <widget class="QPushButton" name="pushButtonExpandShrink">
        <property name="geometry">
         <rect>
-         <x>124</x>
-         <y>490</y>
+         <x>180</x>
+         <y>495</y>
          <width>111</width>
          <height>23</height>
         </rect>
@@ -1280,8 +1458,8 @@
         <rect>
          <x>10</x>
          <y>90</y>
-         <width>231</width>
-         <height>121</height>
+         <width>281</width>
+         <height>113</height>
         </rect>
        </property>
        <property name="title">
@@ -1298,7 +1476,7 @@
          <rect>
           <x>11</x>
           <y>52</y>
-          <width>151</width>
+          <width>181</width>
           <height>21</height>
          </rect>
         </property>
@@ -1306,7 +1484,7 @@
        <widget class="QPushButton" name="pushButtonSelectBaseMapComplex">
         <property name="geometry">
          <rect>
-          <x>164</x>
+          <x>210</x>
           <y>51</y>
           <width>61</width>
           <height>23</height>
@@ -1321,7 +1499,7 @@
          <rect>
           <x>11</x>
           <y>82</y>
-          <width>151</width>
+          <width>181</width>
           <height>21</height>
          </rect>
         </property>
@@ -1332,7 +1510,7 @@
        <widget class="QPushButton" name="pushButtonViewBaseMapComplex">
         <property name="geometry">
          <rect>
-          <x>164</x>
+          <x>210</x>
           <y>80</y>
           <width>61</width>
           <height>23</height>
@@ -1359,9 +1537,9 @@
       <widget class="QPushButton" name="pushButtonRemoveConnect">
        <property name="geometry">
         <rect>
-         <x>124</x>
-         <y>520</y>
-         <width>111</width>
+         <x>155</x>
+         <y>530</y>
+         <width>135</width>
          <height>23</height>
         </rect>
        </property>
@@ -1372,9 +1550,9 @@
       <widget class="QPushButton" name="pushButtonAddConnect">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>520</y>
-         <width>101</width>
+         <x>20</x>
+         <y>530</y>
+         <width>121</width>
          <height>23</height>
         </rect>
        </property>
@@ -1385,10 +1563,10 @@
       <widget class="QPushButton" name="pushButtonGenerateComplexNetwork">
        <property name="geometry">
         <rect>
-         <x>64</x>
-         <y>650</y>
-         <width>181</width>
-         <height>23</height>
+         <x>70</x>
+         <y>655</y>
+         <width>221</width>
+         <height>25</height>
         </rect>
        </property>
        <property name="text">
@@ -1399,6 +1577,12 @@
     </item>
     <item>
      <widget class="QGroupBox" name="groupBoxCommunity">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
         <width>250</width>
@@ -1454,8 +1638,8 @@
         <rect>
          <x>10</x>
          <y>40</y>
-         <width>71</width>
-         <height>16</height>
+         <width>111</width>
+         <height>21</height>
         </rect>
        </property>
        <property name="text">
@@ -1517,7 +1701,7 @@
      <x>0</x>
      <y>0</y>
      <width>1866</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNetwork">

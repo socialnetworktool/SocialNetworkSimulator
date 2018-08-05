@@ -1,1 +1,1 @@
-C:\Python27\Lib\site-packages\PyQt4\pyuic4.bat C:\Users\Zhuo\Desktop\Winter_job\Simulator\SocialNetworkSimulator\UI\CityDiffusion_test.ui>C:\Users\Zhuo\Desktop\Winter_job\Simulator\SocialNetworkSimulator\QTClass\QTCityDiffusion_test.py
+C:\Python27X64\Lib\site-packages\PyQt4\pyuic4.bat C:\Users\johnn\Desktop\SocialNetworkSimulator\UI\CityDiffusion_test.ui>C:\Users\johnn\Desktop\SocialNetworkSimulator\QTClass\QTCityDiffusion_test.py
