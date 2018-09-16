@@ -1012,6 +1012,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.dbfdata = variables
 
     def ViewBaseMap(self):
+        self.GraphicsScene.clear()
         if self.bbox is None:
             Utility.SystemWarning("Please select basemap shapefile before clicking this button!")
             return
