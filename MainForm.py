@@ -1,5 +1,10 @@
 __author__ = 'Lanxue Dang'
+CITY_X_INDEX = 3
+CITY_Y_INDEX = 4
 
+from xlwt import Workbook
+import xlrd
+import io
 import csv
 import os
 import math
@@ -43,6 +48,7 @@ except AttributeError:
 
 class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
     def setupUi(self, MainWindow):
+        print('This is setupUi')
         super(UIMainWindow, self).setupUi(MainWindow)
         self.graphicsViewMain = NetworkView.NetworkViewer(self.FrameCanvas)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
@@ -53,7 +59,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.graphicsViewMain.setStyleSheet("background: transparent")
         self.graphicsViewMain.setObjectName(_fromUtf8("graphicsViewMain"))
         self.gridLayout.addWidget(self.graphicsViewMain, 0, 0, 1, 1)
-
+        print 'This is UIMainWindow'
         self.GraphicsScene = QtGui.QGraphicsScene()
         self.GraphicsScene.setSceneRect(0, 0, self.FrameCanvas.width(), self.FrameCanvas.height())
         # self.textInfoWidget = QtGui.QGraphicsItemGroup(None, self.GraphicsScene) #self.GraphicsScene.addText("", QtGui.QFont("Times", 20, QtGui.QFont.Bold))
@@ -68,6 +74,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         Utility.InitCombobox(self.comboBoxAlgorithmsforSeedNode, GlobalParameters.AlgrotihmsforSeedNodes)
 
     def retranslateUi(self, MainWindow):
+        print 'retranslateUi'
         super(UIMainWindow, self).retranslateUi(MainWindow)
         self.networkCount = 0
         self.complexNetworkParameters = []
@@ -79,6 +86,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.Initialize()
 
     def Initialize(self):
+        print 'Initial self'
         self.graph = None
         self.graphLabelToId = {}
         self.nodeItemList = {}
@@ -98,6 +106,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.aggregate = 0
 
     def TurnOffAllWindows(self):
+        print('This is TurnOffAllWindows')
         self.groupBoxNetworkAnalysis.setVisible(False)
         self.groupBoxNetworkGenerator.setVisible(False)
         self.groupBoxSimulator.setVisible(False)
@@ -113,6 +122,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
     def ConnectEvent(self):
         # menu
+        print('This is ConnectEvent')
         QtCore.QObject.connect(self.actionGenerate_Simulated_Network, QtCore.SIGNAL(_fromUtf8("triggered()")),
                                self.DomenuNetwork)
         QtCore.QObject.connect(self.actionNetwork_Analysis, QtCore.SIGNAL(_fromUtf8("triggered()")),
@@ -121,6 +131,10 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
                                self.DomenuSimulatorUserLevel)
         QtCore.QObject.connect(self.actionSave_Network, QtCore.SIGNAL(_fromUtf8("triggered()")),
                                self.DoMenuSaveNetwork)
+        QtCore.QObject.connect(self.actionGenerate_CityNetwork_File, QtCore.SIGNAL(_fromUtf8("triggered()")),
+                               self.DoMenuGenerateCityNetworkFile)
+        QtCore.QObject.connect(self.actionGenerate_Weight_Matrix_File, QtCore.SIGNAL(_fromUtf8("triggered()")),
+                               self.DoMenuGenerateWeightMatrixFile)
         QtCore.QObject.connect(self.actionCity_Level, QtCore.SIGNAL(_fromUtf8("triggered()")),
                                self.DomenuSimulatorCityLevel)
         QtCore.QObject.connect(self.actionGenerate_Complex_Network, QtCore.SIGNAL(_fromUtf8("triggered()")),
@@ -182,6 +196,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
     # for menu
     def DomenuAnalysis(self):
+        print('This is DomenuAnalysis')
         self.TurnOffAllWindows()
         self.groupBoxNetworkAnalysis.setVisible(True)
 
@@ -195,7 +210,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.SimulatorPartEnabled("USER")
 
     def DomenuSimulatorCityLevel(self):
-
+        print 'DomenuSimulatorCityLevel'
         # form = QtGui.QMainWindow()
         # UI = CityDiffusionForm.CityDiffusionForm()
         # UI.setupUi(form)
@@ -217,6 +232,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         #     self.groupBoxOpinionLeaders.setEnabled(False)
         #     self.groupBoxCityLevelDiffusion.setEnabled(True)
         # else:
+        print 'SimulatorPartEnabled'
         self.groupBoxICModel.setEnabled(True)
         self.groupBoxLTModel.setEnabled(True)
         self.groupBoxSeedNodes.setEnabled(True)
@@ -247,6 +263,131 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             seqences.append(str.format("{0}#{1}\n", EI.GetSrcNId(), EI.GetDstNId()))
         file.writelines(seqences)
         file.close()
+
+    def DoMenuGenerateCityNetworkFile(self):
+        self.ClickRestNetwork()
+        filePath = QtGui.QFileDialog.getOpenFileName(self, "Generate CityNetwork File", "",
+                                                     "Networkfile data files (*.csv)")
+        print(filePath)
+        if filePath == "":
+            return
+        try:
+            f = open(filePath)
+        except:
+            f = open(filePath)
+            return False
+        self.graph = snap.TUNGraph.New()
+        endofFile = False
+        data = []
+        with open(filePath, "r") as fp:
+            reader = csv.reader(fp, dialect=csv.excel)
+            for rows in reader:
+                data.append(rows)
+        for i in range(1, len(data)):
+             data[data[i][0]] = [data[i][CITY_X_INDEX], data[i][CITY_Y_INDEX]]
+        graph = snap.TUNGraph.New()
+        for i in range(26):
+            graph.AddNode(i)
+        for i in range(26):
+            for j in range(26):
+                graph.AddEdge(i, j)
+        newPath= os.path.split(str(filePath))[0] + "/CityNetworkFile.txt"
+        if self.graph is None:
+            Utility.SystemWarning("There is no network to save!")
+            return
+        file = open(newPath, 'w')
+        nNodes = graph.GetNodes()
+        nEdges = graph.GetEdges()
+        seqences = []
+        seqences.append(str.format("Nodes#{0}#Edges#{1}\n", nNodes, nEdges))
+        for node in graph.Nodes():
+            seqences.append(str.format("{0}\n", node.GetId()))
+        for EI in graph.Edges():
+            seqences.append(str.format("{0}#{1}\n", EI.GetSrcNId(), EI.GetDstNId()))
+        file.writelines(seqences)
+        file.close()
+    def DoMenuGenerateWeightMatrixFile(self):
+        self.ClickRestNetwork()
+        filePath = QtGui.QFileDialog.getOpenFileName(self, "Generate Weight Matrix File", "",
+                                                     "Networkfile data files (*.csv)")
+        if filePath == "":
+            return
+        try:
+            f = open(filePath)
+        except:
+            f = open(filePath)
+            return False
+        self.graph = snap.TUNGraph.New()
+        endofFile = False
+        print("current path is " + filePath)
+        if (os.path.exists(filePath)==False):
+           os.makedirs(filePath)
+        print(os.path.split(str(filePath)))
+        currentPath = os.path.split(str(filePath))[0]
+        tempV = os.listdir(currentPath)
+        outPutFile = currentPath + "\\Result.csv"
+        with open(outPutFile,'wb') as fake:
+            csv_write = csv.writer(fake)
+        for file in tempV:
+            tempPropOfFile = os.path.splitext(file)
+            if tempPropOfFile[1] == ".xls":
+                    print("Processing " + file)
+                # convert file into csv
+                    file1 = io.open(currentPath + "\\"+file, "r")
+                    data = file1.readlines()
+                    xldoc = Workbook()
+                    sheet = xldoc.add_sheet("Sheet1", cell_overwrite_ok=True)
+                    for i, row in enumerate(data):
+                            # Two things are done here
+                            # Removeing the '\n' which comes while reading the file using io.open
+                            # Getting the values after splitting using '\t'
+                        for j, val in enumerate(row.replace('\n', '').split('\t')):
+                                sheet.write(i, j, val)
+                    # Saving the file as an excel file
+                    xldoc.save(currentPath + "\\new"+file)
+                    workbook = xlrd.open_workbook(currentPath + "\\new"+file)
+                    table = workbook.sheet_by_index(0)
+                    with open(outPutFile, 'wb') as f:
+                        write = csv.writer(f)
+                        for row_num in range(table.nrows):
+                            row_value = table.row_values(row_num)
+                            write.writerow(row_value)
+            elif tempPropOfFile[1] == ".csv":
+                print("Processing " + file)
+                with open(outPutFile,'ab') as tempFile:
+                    with open(currentPath + "\\"+ file, 'rb') as inputFile:
+                        tempFile.write(inputFile.read())
+                tempFile.close()
+            else:
+               print(tempPropOfFile[1] + "invalid file types")
+        #now we have outPutFile in hand
+        #next step is
+        out_data = []
+        user_names = []
+        with open(outPutFile) as the_input:
+            reader = csv.reader(the_input)
+            with open(currentPath + "//user_location.csv", 'wb') as the_output:
+                writer = csv.writer(the_output)
+                for row in reader:
+                    try:
+                        if not user_names or row[6] not in user_names:
+                            out_data.append([row[6],row[2]])
+                            print(out_data)
+                            print("11111111")
+                            user_names.append(row[6])
+                    except IndexError:
+                        print row
+                        print IndexError
+                        print("error")
+                        continue
+                print("data before write into file" )
+                print(out_data)
+                writer.writerows(out_data)
+
+            print "extraction finished!"
+            print "Total number of users are {}".format(len(user_names))
+
+
 
     def DoMenuCNW(self):
         if self.graph is None:
@@ -332,7 +473,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
     # for button
     def ClickGenerateNetwork(self):
-
+        print 'ClickGenerateNetwork'
         if self.Drawing:
             Utility.SystemWarning("Now you are drawing, Please wait!")
             return
@@ -365,6 +506,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
 
     def ClickGenerateOpinionLeaders(self):
+        print ' ClickGenerateOpinionLeaders'
         if self.graph is None:
             Utility.SystemWarning("Please make sure that there is a network before simulating information diffusion!")
             return
@@ -946,15 +1088,18 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             self.edgeItemList[key].setVisible(tag)
 
     def CheckBaseMap(self):
-        if not self.groupBoxBaseMap.isChecked():
+        if not self.groupBoxBaseMap.isChecked:
+			
             self.bbox = None
             self.baseMap = False
+			
             self.lineEditPathName.setText("")
             self.comboBoxBaseMapLayers.clear()
             for key in self.polygonItemList.keys():
                 self.GraphicsScene.removeItem(self.polygonItemList[key])
 
     def AddItemToScene(self, item, type, strId):
+        print 'AddItemToScene'
         if type == "P":
             self.nodeItemList[int(str(strId))] = item
         else:
@@ -978,6 +1123,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
     # Draw
     def DrawGraph(self, graph, position=None):
+        print 'DrawGraph'
         # Area used: self.GraphicsScene.width(); self.GraphicsScene.height()
         if not self.groupBoxBaseMap.isChecked():
             self.GraphicsScene.setBackgroundBrush(QtGui.QBrush(QtGui.QColor("whitesmoke")))
@@ -1012,7 +1158,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.dbfdata = variables
 
     def ViewBaseMap(self):
-        self.GraphicsScene.clear()
+        print 'This is ViewBaseMap'
         if self.bbox is None:
             Utility.SystemWarning("Please select basemap shapefile before clicking this button!")
             return
