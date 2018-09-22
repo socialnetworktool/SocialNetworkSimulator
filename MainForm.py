@@ -264,6 +264,19 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         file.writelines(seqences)
         file.close()
 
+
+    def SaveGraph(self,graph, path, MADict):
+        a = open(path, "w")
+        nNodes = graph.GetNodes()
+        nEdges = graph.GetEdges()
+        seqences = []
+        seqences.append(str.format("Nodes#{0}#Edges#{1}\n", nNodes, nEdges))
+        for node in graph.Nodes():
+            seqences.append(str.format("{0}#{1}#{2}\n", node.GetId(), MADict[str(node.GetId())][0], MADict[str(node.GetId())][1]))
+        for EI in graph.Edges():
+            seqences.append(str.format("{0},{1}\n", EI.GetSrcNId(), EI.GetDstNId()))
+        a.writelines(seqences)
+        a.close()
     def DoMenuGenerateCityNetworkFile(self):
         self.ClickRestNetwork()
         filePath = QtGui.QFileDialog.getOpenFileName(self, "Generate CityNetwork File", "",
@@ -283,29 +296,20 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             reader = csv.reader(fp, dialect=csv.excel)
             for rows in reader:
                 data.append(rows)
-        for i in range(1, len(data)):
-             data[data[i][0]] = [data[i][CITY_X_INDEX], data[i][CITY_Y_INDEX]]
+        MAData = data
+        MADict = {}
+        for i in range(1, len(MAData)):
+            print type(MAData[i][0]), [MAData[i][CITY_X_INDEX], MAData[i][CITY_Y_INDEX]]
+            MADict[MAData[i][0]] = [MAData[i][CITY_X_INDEX], MAData[i][CITY_Y_INDEX]]
         graph = snap.TUNGraph.New()
         for i in range(26):
             graph.AddNode(i)
         for i in range(26):
             for j in range(26):
                 graph.AddEdge(i, j)
-        newPath= os.path.split(str(filePath))[0] + "/CityNetworkFile.txt"
-        if self.graph is None:
-            Utility.SystemWarning("There is no network to save!")
-            return
-        file = open(newPath, 'w')
-        nNodes = graph.GetNodes()
-        nEdges = graph.GetEdges()
-        seqences = []
-        seqences.append(str.format("Nodes#{0}#Edges#{1}\n", nNodes, nEdges))
-        for node in graph.Nodes():
-            seqences.append(str.format("{0}\n", node.GetId()))
-        for EI in graph.Edges():
-            seqences.append(str.format("{0}#{1}\n", EI.GetSrcNId(), EI.GetDstNId()))
-        file.writelines(seqences)
-        file.close()
+        newfilePath,fileName = os.path.split(str(filePath))
+        self.SaveGraph(graph, newfilePath + "/CityNetwork1.txt", MADict)
+
     def DoMenuGenerateWeightMatrixFile(self):
         self.ClickRestNetwork()
         filePath = QtGui.QFileDialog.getOpenFileName(self, "Generate Weight Matrix File", "",
