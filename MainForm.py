@@ -23,6 +23,7 @@ import Utility
 from QTClass import QTMainForm
 from PyQt4 import QtCore, QtGui
 from CharacteristicForm import CharacteristicForm
+import basicDescription
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -455,6 +456,26 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             self.tableWidgetNetworkCharacteristics.item(2, 1).setText(
                 str(snap.GetModularity(self.graph, Nodes, self.graph.GetEdges())))
             self.tableWidgetNetworkCharacteristics.item(3, 1).setText(str(snap.GetBfsEffDiam(self.graph, 10, False)))
+
+        if self.graph is None:
+            Utility.SystemWarning("There is no network!")
+            return
+        basicShow = basicDescription.netBasicDescription(self.graph)
+        #centrality = Centrality.Centrality(self.graph)
+        basicShow.GetBasic()#basicShow.GetEachNode()
+
+        #Utility.SystemWarning(listValue)
+       # basicShow.GetEachNode()
+
+#    def ClickEigenvectorCentrality(self):
+#        if self.graph is None:
+#            Utility.SystemWarning("There is no network!")
+#            return
+#        centrality = Centrality.Centrality(self.graph)
+#        listValue = centrality.EigenvectorCentrality()
+#        self.centralityUI.SetOutput(listValue)
+#        self.centralityForm.setWindowTitle("Eigenvector Centrality")
+#        self.centralityForm.show()
 
     def ClickExpandShrinkTalbe(self):
         if self.pushButtonExpandShrink.text() == "Expand Table":
@@ -1011,16 +1032,24 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
         self.dbfdata = variables
 
+    def GetAttribute(self,name):
+        try:
+            r=object.__getattribute__(self,name)
+        except:
+            r=None
+        return r
+
     def ViewBaseMap(self):
-        self.GraphicsScene.clear()
         if self.bbox is None:
             Utility.SystemWarning("Please select basemap shapefile before clicking this button!")
             return
         left, top, right, bottom, ratio = Utility.GetLTRB(self.bbox, self.GraphicsScene)
+        print left
         self.polyBorderDict = {}
 
         for polygon in self.shapes:
             for i in range(polygon.partsNum):
+           # for i in range(polygon.partsNum):
                 points = []
                 xList = []
                 yList = []
