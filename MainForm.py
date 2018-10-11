@@ -172,11 +172,8 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.pushButtonEigenvCentrality.clicked.connect(self.ClickEigenvectorCentrality)
         #self.pushButtonOpenWeightMatrix.clicked.connect(self.ClickOpenWeightMatrix)
 
-        # checkboxClick
         self.checkBoxEdge.clicked.connect(self.CheckShowEdge)
-
         # Mouse Event
-
         # selectedchange
         self.comboBoxNetworkType.currentIndexChanged.connect(self.SelectedChangeComboBoxNetworkType)
         self.comboBoxNetworkTypeforComplex.currentIndexChanged.connect(self.SelChangeCombNetworkTypeforComplex)
@@ -437,7 +434,6 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.DrawGraph(self.graph)
 
         # Draw edges among networks
-
     def ClickRestNetwork(self):
 
         if self.Drawing:
@@ -464,7 +460,6 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         #centrality = Centrality.Centrality(self.graph)
         basicShow.GetBasic()#basicShow.GetEachNode()
 
-        #Utility.SystemWarning(listValue)
        # basicShow.GetEachNode()
 
 #    def ClickEigenvectorCentrality(self):
