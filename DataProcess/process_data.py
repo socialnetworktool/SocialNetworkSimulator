@@ -63,7 +63,7 @@ def get_W(word_vecs, k=300):
 
 def load_bin_vec(fname, vocab):
     """
-    Loads 300x1 word vecs from Google (Mikolov) word2vec
+    Loads 300x1 word vecs from Google (Mikolov) word2vec. Testing with cmd
     """
     word_vecs = {}
     with open(fname, "rb") as f:
