@@ -912,6 +912,8 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             self.GraphicsScene.addItem(line)
 
 
+		
+		
     def ActiveNodeDiffusion(self, nodeIndex, increment, p):
         self.activedNodes += 1
         item = self.nodeItemList[nodeIndex]
@@ -1077,6 +1079,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
                 item.setFlags(QtCore.Qt.ItemIsEnabled)
             self.tableWidgetParameterComplexParameters.setItem(i, 1, item)
 
+	
     # for checkbox
     def CheckLTCheckBox(self):
         if self.groupBoxLTModel.isChecked():
@@ -1101,7 +1104,7 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             self.comboBoxBaseMapLayers.clear()
             for key in self.polygonItemList.keys():
                 self.GraphicsScene.removeItem(self.polygonItemList[key])
-
+# Adding new item
     def AddItemToScene(self, item, type, strId):
         print 'AddItemToScene'
         if type == "P":
