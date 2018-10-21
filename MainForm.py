@@ -28,6 +28,7 @@ import Utility
 from QTClass import QTMainForm
 from PyQt4 import QtCore, QtGui
 from CharacteristicForm import CharacteristicForm
+import basicDescription
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -48,7 +49,6 @@ except AttributeError:
 
 class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
     def setupUi(self, MainWindow):
-        print('This is setupUi')
         super(UIMainWindow, self).setupUi(MainWindow)
         self.graphicsViewMain = NetworkView.NetworkViewer(self.FrameCanvas)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
@@ -106,7 +106,6 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
         self.aggregate = 0
 
     def TurnOffAllWindows(self):
-        print('This is TurnOffAllWindows')
         self.groupBoxNetworkAnalysis.setVisible(False)
         self.groupBoxNetworkGenerator.setVisible(False)
         self.groupBoxSimulator.setVisible(False)
@@ -122,7 +121,6 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
     def ConnectEvent(self):
         # menu
-        print('This is ConnectEvent')
         QtCore.QObject.connect(self.actionGenerate_Simulated_Network, QtCore.SIGNAL(_fromUtf8("triggered()")),
                                self.DomenuNetwork)
         QtCore.QObject.connect(self.actionNetwork_Analysis, QtCore.SIGNAL(_fromUtf8("triggered()")),
@@ -196,7 +194,6 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
 
     # for menu
     def DomenuAnalysis(self):
-        print('This is DomenuAnalysis')
         self.TurnOffAllWindows()
         self.groupBoxNetworkAnalysis.setVisible(True)
 
@@ -377,7 +374,6 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
                         if not user_names or row[6] not in user_names:
                             out_data.append([row[6],row[2]])
                             print(out_data)
-                            print("11111111")
                             user_names.append(row[6])
                     except IndexError:
                         print row
@@ -601,7 +597,12 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             self.tableWidgetNetworkCharacteristics.item(2, 1).setText(
                 str(snap.GetModularity(self.graph, Nodes, self.graph.GetEdges())))
             self.tableWidgetNetworkCharacteristics.item(3, 1).setText(str(snap.GetBfsEffDiam(self.graph, 10, False)))
-
+        if self.graph is None:
+            Utility.SystemWarning("There is no network!")
+            return
+        basicShow = basicDescription.netBasicDescription(self.graph)
+        #centrality = Centrality.Centrality(self.graph)
+        basicShow.GetBasic()#basicShow.GetEachNode()
     def ClickExpandShrinkTalbe(self):
         if self.pushButtonExpandShrink.text() == "Expand Table":
             self.groupBoxComplexNetwork.setFixedWidth(650)
@@ -1160,7 +1161,12 @@ class UIMainWindow(QtGui.QMainWindow, QTMainForm.Ui_MainWindow):
             self.comboBoxBaseMapLayers.setCurrentIndex(1)
 
         self.dbfdata = variables
-
+    def GetAttribute(self,name):
+        try:
+            r=object.__getattribute__(self,name)
+        except:
+            r=None
+        return r
     def ViewBaseMap(self):
         print 'This is ViewBaseMap'
         if self.bbox is None:
