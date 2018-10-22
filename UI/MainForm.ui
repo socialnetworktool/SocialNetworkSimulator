@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1918</width>
+    <width>1866</width>
     <height>902</height>
    </rect>
   </property>
@@ -516,6 +516,15 @@
         </property>
        </widget>
       </widget>
+      <zorder>comboBoxNetworkType</zorder>
+      <zorder>label</zorder>
+      <zorder>labelConfigureParameters</zorder>
+      <zorder>tableWidgetParameter</zorder>
+      <zorder>pushButtonGenerateNetwork</zorder>
+      <zorder>checkBoxEdge</zorder>
+      <zorder>pushButtonRestNetwork</zorder>
+      <zorder>groupBoxBaseMap</zorder>
+      <zorder>groupBoxNetworkAnalysis</zorder>
      </widget>
     </item>
     <item>
@@ -776,6 +785,17 @@
         </property>
        </widget>
       </widget>
+      <zorder>textEditSeedNodes</zorder>
+      <zorder>label_2</zorder>
+      <zorder>horizontalSliderPleader</zorder>
+      <zorder>label_3</zorder>
+      <zorder>label_4</zorder>
+      <zorder>label_pleader_value</zorder>
+      <zorder>horizontalSliderPNormal</zorder>
+      <zorder>label_padopter_value</zorder>
+      <zorder>pushButtonFindParameters</zorder>
+      <zorder>groupBox_2</zorder>
+      <zorder>groupBoxNetworkGenerator</zorder>
      </widget>
     </item>
     <item>
@@ -1169,6 +1189,11 @@
         </property>
        </widget>
       </widget>
+      <zorder>groupBoxLTModel</zorder>
+      <zorder>groupBoxSeedNodes</zorder>
+      <zorder>groupBoxICModel</zorder>
+      <zorder>groupBoxOpinionLeaders</zorder>
+      <zorder>groupBoxNetworkGenerator</zorder>
      </widget>
     </item>
     <item>
@@ -1675,8 +1700,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1918</width>
-     <height>21</height>
+     <width>1866</width>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNetwork">
@@ -1720,20 +1745,12 @@
     </property>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuDataPreProcess">
-    <property name="title">
-     <string>DataPreProcess</string>
-    </property>
-    <addaction name="actionGenerate_CityNetwork_File"/>
-    <addaction name="actionGenerate_Weight_Matrix_File"/>
-   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuNetwork"/>
    <addaction name="menuAnalysis"/>
    <addaction name="menuCommunity"/>
    <addaction name="menuSimulator"/>
    <addaction name="menuData"/>
-   <addaction name="menuDataPreProcess"/>
   </widget>
   <action name="actionOpen">
    <property name="text">
@@ -1923,16 +1940,6 @@
   <action name="actionAbout_2">
    <property name="text">
     <string>About</string>
-   </property>
-  </action>
-  <action name="actionGenerate_CityNetwork_File">
-   <property name="text">
-    <string>Generate CityNetwork File</string>
-   </property>
-  </action>
-  <action name="actionGenerate_Weight_Matrix_File">
-   <property name="text">
-    <string>Generate Weight Matrix File</string>
    </property>
   </action>
  </widget>
