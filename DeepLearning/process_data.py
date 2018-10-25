@@ -48,6 +48,8 @@ def build_data_cv(data_folder, cv=10, clean_string=True):
     
 def get_W(word_vecs, k=300):
     """
+    
+    
     Get word matrix. W[i] is the vector for word indexed by i
     """
     vocab_size = len(word_vecs)
