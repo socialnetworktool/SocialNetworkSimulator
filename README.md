@@ -1,6 +1,6 @@
 
 # Social Network Simulator
-SocialNetworkSimulator, A software that enable spatio-temporal social network analysis and simulation, is co-direcetd by Xinyue Ye at New Jersey Institute of Technology and Jay Lee at Kent State University. This tool is based upon work supported by the National Science Foundation under Grant No. 1416509. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the National Science Foundation.
+SocialNetworkSimulator, A software that enable spatio-temporal social network analysis and simulation, is co-direcetd by Xinyue Ye at New Jersey Institute of Technology and Ming-Hsiang (Ming) Tsou at San Diego State University. This tool is based upon work supported by the National Science Foundation under Grant No. 1416509. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author and do not necessarily reflect the views of the National Science Foundation.
 
 Currently, social media has been playing an important role in the process of information diffusion. Exploring the pattern of message propagation on social network help us better prepare for natural disasters or human crises. So, we developed models, algorithms, and tools to generate simulated networks, analyze simulated networks, and simulate information diffusion on social network over time.
 
