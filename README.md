@@ -19,7 +19,7 @@ Lee, J., & Ye, X*. (2018). An Open Source Spatiotemporal Model for Simulating Ob
 Wang, Z., Ye, X, Lee. J., Chang, X., Liu, H., & Li, Q. (2018) A Spatial Econometric Modeling of Online Social Interactions Using Microblogs. Computers, Environment and Urban Systems. doi: 10.1016/j.compenvurbsys.2018.02.001
 
 
-## Install with CMD prompt
+## Install with command prompt
 In **software_and_packages** folder: 
 1) Python 2.7 64 version is required
 
