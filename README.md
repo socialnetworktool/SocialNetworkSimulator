@@ -19,7 +19,7 @@ Lee, J., & Ye, X*. (2018). An Open Source Spatiotemporal Model for Simulating Ob
 Wang, Z., Ye, X, Lee. J., Chang, X., Liu, H., & Li, Q. (2018) A Spatial Econometric Modeling of Online Social Interactions Using Microblogs. Computers, Environment and Urban Systems. doi: 10.1016/j.compenvurbsys.2018.02.001
 
 
-## Installation
+## Install with CMD prompt
 In **software_and_packages** folder: 
 1) Python 2.7 64 version is required
 
@@ -51,7 +51,49 @@ In **software_and_packages** folder:
 	          Pip install prettytable               		
 		  
           ```
+	  - c. Unzip snap-4.0.0-4.0-Win-x64-py2.7.zip
+	  - d. Execute the following commands using command prompt.
+          ```
+        cd snap-4.0.0-4.0-Win-x64-py2.7
+		  python setup.py install
+	                     		
+		  
+          ```
 5) To start this software, please use the command for command prompt, for example:    			```Python C:\SocialNetworkSimulator\ SocialNetworkSimulator.py```
+
+## Install with Anaconda
+1) Create python environment with Anaconda:
+	* a. Execute the following commands using Anaconda command prompt.
+	
+	```
+		conda create --name python4SNS python=2.7
+		conda activate python4SNS
+	```
+	
+2) Install PyQT4,SNAP and third party library
+	* a. Download whl file from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyqt4.
+		
+		
+		Execute the following command using Anaconda command prompt.
+		
+		```
+			pip install PyQt4-4.11.4-cp27-cp27m-win_amd64.whl
+		```
+		to install PyQT4.
+		
+	* b. Unzip snap-4.0.0-4.0-Win-x64-py2.7.zip
+	
+	* c. Execute the following commands using Anaconda command prompt.
+			
+
+		```
+			cd snap-4.0.0-4.0-Win-x64-py2.7
+			python setup.py install
+			pip install xlrd numpy matplotlib prettytable
+		```
+
+        		
+			 
 ## Getting Started
 
 After starting the software tool, you can see there is a menu bar on the top of the main window. Below is the summary of the functions in the menu:
