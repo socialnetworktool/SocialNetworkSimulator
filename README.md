@@ -47,7 +47,6 @@ In **software_and_packages** folder:
           ```
 	          Pip install numpy-1.13.1-cp27-none-win_amd64.whl
 	          Pip install matplotlib-2.0.2-cp27-cp27m-win_amd64.whl
-	          Pip install snap-4.0.0-4.0-Win-x64-py2.7.zip
 	          Pip install prettytable               		
 		  
           ```
