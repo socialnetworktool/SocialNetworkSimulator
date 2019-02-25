@@ -18,7 +18,7 @@ Lee, J., & Ye, X*. (2018). An Open Source Spatiotemporal Model for Simulating Ob
 
 Wang, Z., Ye, X, Lee. J., Chang, X., Liu, H., & Li, Q. (2018) A Spatial Econometric Modeling of Online Social Interactions Using Microblogs. Computers, Environment and Urban Systems. doi: 10.1016/j.compenvurbsys.2018.02.001
 
-
+## Must be in Microsoft Windows system
 ## Install with command prompt
 In **software_and_packages** folder: 
 1) Python 2.7 64 version is required
@@ -34,7 +34,7 @@ In **software_and_packages** folder:
                * ii. C:\Python27\Lib\
                * iii. C:\Python27\Scripts\
      
-2) Double click *PyQt4-4.11.4-gpl-Py2.7-Qt4.8.7-x64.exe* to install PyQt package.
+2)   click *PyQt4-4.11.4-gpl-Py2.7-Qt4.8.7-x64.exe* to install PyQt package.(GitHub has file size limit, please search the file name and download it from internet.)
 3) Double click *vcredist_x64.exe* to install it.
 4) Install module *numpy*, *matplotlib*, *Snap*, and *xlrd*.
      - a. Open command prompt and change path to the location where packages are. Here you are supposed to extract the tool file to C:\SocialNetworkSimulator. Use the command:
@@ -48,7 +48,8 @@ In **software_and_packages** folder:
 	          Pip install numpy-1.13.1-cp27-none-win_amd64.whl
 	          Pip install matplotlib-2.0.2-cp27-cp27m-win_amd64.whl
 	          Pip install prettytable               		
-	          Pip install xlwt               		
+	          Pip install xlwt
+		  Pip install xlrd_with_formulas-1.0.0-py2.py3-none-any.whl
           ```
 	  - c. Unzip snap-4.0.0-4.0-Win-x64-py2.7.zip
 	  - d. Execute the following commands using command prompt.
