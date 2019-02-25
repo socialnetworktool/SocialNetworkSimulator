@@ -18,8 +18,7 @@ Lee, J., & Ye, X*. (2018). An Open Source Spatiotemporal Model for Simulating Ob
 
 Wang, Z., Ye, X, Lee. J., Chang, X., Liu, H., & Li, Q. (2018) A Spatial Econometric Modeling of Online Social Interactions Using Microblogs. Computers, Environment and Urban Systems. doi: 10.1016/j.compenvurbsys.2018.02.001
 
-## Must be in Microsoft Windows system
-## Install with command prompt
+## Install with command prompt (in Microsoft Windows system)
 In **software_and_packages** folder: 
 1) Python 2.7 64 version is required
 
@@ -61,7 +60,7 @@ In **software_and_packages** folder:
           ```
 5) To start this software, please use the command for command prompt, for example:    			```Python C:\SocialNetworkSimulator\ SocialNetworkSimulator.py```
 
-## Install with Anaconda
+## Install with Anaconda (in Microsoft Windows system)
 1) Create python environment with Anaconda:
 	* a. Execute the following commands using Anaconda command prompt.
 	
